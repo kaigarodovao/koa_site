@@ -410,8 +410,8 @@
 }
 #ourClientsSection .ourClientsWrapper .clientWrapper {
   box-sizing: border-box;
-  width: 270px;
-  height: 170px;
+  width: 320px;
+  height: 240px;
   margin: 0 10px 30px;
   padding: 10px;
   border-radius: 10px;
@@ -425,7 +425,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  filter: grayscale(1);
+  filter: grayscale(0);
 }
 #ourClientsSection .ourClientsWrapper .clientWrapper .client:hover {
   transition: 0.5s;
