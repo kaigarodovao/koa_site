@@ -1,0 +1,83 @@
+@import "variables";
+
+#whoAreWeSection {
+  height: 100vh;
+  min-height: fit-content;
+  color: white;
+  box-shadow: inset 0 0 0 9999px #131d29d1;
+
+  .content {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+
+    .whoAreWeWrapper {
+      width: 100%;
+
+      .whoAreWeTitle {
+        margin-top: 40px;
+
+        h2 {
+          font: $fontTitleH2;
+          text-transform: uppercase;
+        }
+      }
+
+      .whoAreWeContent {
+        width: 100%;
+        max-width: 510px;
+
+        .whoWeAreDescription {
+          padding-top: 10px;
+
+          p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .howAboutTimingWrapper {
+      //width: 50%;
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+      align-items: flex-end;
+      flex-direction: column;
+
+      .howAboutTimingTitle {
+        padding-top: 20px;
+
+        h2 {
+          font: $fontTitleH2;
+          text-transform: uppercase;
+        }
+      }
+
+      .howAboutTimingContent {
+        width: 100%;
+        max-width: 600px;
+
+        p {
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #whoAreWeSection {
+    .whoAreWeTitle {
+      h2 {
+        font: $fontTitleH2Mobile;
+      }
+    }
+  }
+}

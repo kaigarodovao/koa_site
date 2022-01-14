@@ -1,0 +1,343 @@
+@import "variables";
+
+#industriesSection {
+  .industriesWrapper {
+    .industriesTitle {
+      padding-top: $titleSecondaryPadding;
+      text-align: center;
+
+      h2 {
+        font: $fontTitleH2;
+        text-transform: uppercase;
+      }
+    }
+
+    .industriesMenuSlider {
+      position: relative;
+      margin: 20px 40px 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      .industriesMenuSliderButton {
+        position: absolute;
+        z-index: 9999;
+        top: 60px;
+        width: 31px;
+        height: 40px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: white;
+        background-image: url("../img/arrow.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+
+        &.slick-prev {
+          left: -31px;
+          transform: rotate(0deg);
+        }
+
+        &.slick-next {
+          right: -31px;
+          transform: rotate(180deg);
+        }
+      }
+
+      .industriesMenuElement {
+        display: block;
+        width: 185px;
+        height: 170px;
+        padding: 3px;
+        cursor: pointer;
+        border-left: 1px solid #0000001c;
+
+        .industriesMenuIcon {
+          display: block;
+          width: 100px;
+          height: 70px;
+          margin: 40px auto 0;
+          text-align: center;
+          background: url("../img/industry-sprite.png") no-repeat;
+
+          &.icon1 {
+            background-position: 26px 8px;
+          }
+
+          &.icon2 {
+            background-position: -4px -120px;
+          }
+
+          &.icon3 {
+            background-position: 18px -255px;
+          }
+
+          &.icon4 {
+            background-position: 18px -395px;
+          }
+
+          &.icon5 {
+            background-position: 20px -525px;
+          }
+
+          &.icon6 {
+            background-position: 15px -665px;
+          }
+
+          &.icon7 {
+            background-position: 20px -785px;
+          }
+
+          &.icon8 {
+            background-position: 20px -915px;
+          }
+
+          &.icon9 {
+            background-position: 18px -1030px;
+          }
+
+          &.icon10 {
+            background-position: 18px -9999px;
+          }
+
+          &.icon11 {
+            background-position: 18px -9999px;
+          }
+        }
+
+        .industryMenuElementTitle {
+          text-align: center;
+        }
+
+        &.selected {
+          color: white;
+          background: url("../img/tabbg3.png") left no-repeat $industriesMenuElementSelected;
+          box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+
+          .industriesMenuIcon {
+            &.icon1 {
+              background-position: -112px 8px;
+            }
+
+            &.icon2 {
+              background-position: -140px -120px;
+            }
+
+            &.icon3 {
+              background-position: -119px -255px;
+            }
+
+            &.icon4 {
+              background-position: -110px -395px;
+            }
+
+            &.icon5 {
+              background-position: -116px -525px;
+            }
+
+            &.icon6 {
+              background-position: -122px -665px;
+            }
+
+            &.icon7 {
+              background-position: -116px -785px;
+            }
+
+            &.icon8 {
+              background-position: -116px -915px;
+            }
+
+            &.icon9 {
+              background-position: -116px -1030px;
+            }
+
+            &.icon10 {
+              background-position: -110px -9999px;
+            }
+
+            &.icon11 {
+              background-position: -110px -9999px;
+            }
+          }
+        }
+      }
+    }
+
+    .industriesContentWrapper {
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+      justify-content: space-between;
+      margin: 40px 0 40px 0;
+
+      .industriesElementsWrapper {
+
+        .industriesElement {
+          h3 {
+
+          }
+
+          ul {
+            margin-top: 10px;
+            list-style: none;
+
+            li {
+              position: relative;
+              margin-top: 18px;
+              margin-bottom: 18px;
+
+              &:before {
+                position: absolute;
+                top: -3px;
+                left: -48px;
+                width: 30px;
+                height: 30px;
+                content: '';
+                transform: rotate(180deg);
+                border-radius: 100%;
+                background: white url("../img/arrow.png") no-repeat center;
+                -webkit-background-size: 14px;
+                background-size: 14px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+              }
+            }
+          }
+
+          &.hidden {
+            display: none;
+          }
+        }
+      }
+
+      .industriesContentSpinnerWrapper {
+        position: relative;
+
+        .industriesContentSpinner {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          width: 272px;
+          height: 272px;
+          -moz-animation: spin 6s infinite linear;
+          -o-animation: spin 6s infinite linear;
+          -webkit-animation: spin 6s infinite linear;
+          animation: spin 6s infinite linear;
+          opacity: 0.9;
+          border: 15px solid $industriesMenuElementSelected;
+          border-right: 15px solid transparent;
+          border-left: 15px solid transparent;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          border-radius: 100%;
+
+          .industriesContentSpinner2 {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 220px;
+            height: 220px;
+            margin: 10px;
+            -moz-animation: spin 4s infinite ease;
+            -o-animation: spin 4s infinite ease;
+            -webkit-animation: spin 4s infinite ease;
+            animation: spin 4s infinite ease;
+            opacity: 0.9;
+            border: 15px solid $industriesMenuElementSelected;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 100%;
+          }
+        }
+
+        .industriesContentSpinnerCaption {
+          position: absolute;
+          top: 80px;
+          left: 85px;
+          width: 100px;
+          height: 100px;
+          background: url("../img/industries360deg.png") no-repeat center center;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+//slider
+.slick-slide:focus {
+  outline: none;
+}
+
+//animation
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #industriesSection {
+    .industriesWrapper {
+      .industriesTitle {
+        h2 {
+          font: $fontTitleH2Mobile;
+        }
+      }
+
+      .industriesMenuSlider {
+
+        .industriesMenuSliderButton {
+          top: 40px;
+
+          &.slick-prev {
+          }
+
+          &.slick-next {
+          }
+        }
+
+        .industriesMenuElement {
+          height: 110px;
+          width: 47%;
+          max-width: 145px;
+
+
+          .industriesMenuIcon {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .industriesContentWrapper {
+        .industriesContentSpinnerWrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}

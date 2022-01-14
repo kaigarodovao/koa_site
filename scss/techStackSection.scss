@@ -1,0 +1,75 @@
+@import "variables";
+
+#techStackSection {
+  .techStackContent {
+    .techStackTitle {
+      padding-top: $titleSecondaryPadding;
+      text-align: center;
+      text-transform: uppercase;
+
+      h2 {
+        font: $fontTitleH2;
+        color: #444444;
+      }
+    }
+
+    .techStackWrapper {
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .techStack {
+        transition: .5s;
+        filter: grayscale(1);
+
+        &:hover {
+          transition: .5s;
+          filter: grayscale(0);
+        }
+      }
+
+      .techStackImageWrapper {
+        padding: 20px;
+        width: 220px;
+        height: 118px;
+        box-sizing: border-box;
+
+        .techStackImage {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #techStackSection {
+    .techStackContent {
+      .techStackTitle {
+        h2 {
+          font: $fontTitleH2Mobile;
+          color: #444444;
+        }
+      }
+
+      .techStackWrapper {
+        .techStack {
+          width: 50%;
+        }
+        .techStackImageWrapper {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

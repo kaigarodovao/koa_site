@@ -1,0 +1,82 @@
+@import "variables";
+
+#ourClientsSection {
+  //background-color: #e8e8e8;
+  box-shadow: inset 0 0 0 9999px #131d298c;
+
+  .ourClientsTitle {
+    position: relative;
+    height: 50px;
+    padding-top: $titleSecondaryPadding;
+    text-align: center;
+
+    h2 {
+      color: white;
+      font: $fontTitleH2;
+      text-transform: uppercase;
+    }
+  }
+
+  .ourClientsWrapper {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+
+    .clientWrapper {
+      box-sizing: border-box;
+      width: 270px;
+      height: 170px;
+      margin: 0 10px 30px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.2);
+
+      .client {
+        width: 100%;
+        height: 100%;
+        transition: .5s;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        filter: grayscale(1);
+
+        &:hover {
+          transition: .5s;
+          filter: grayscale(0);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #ourClientsSection {
+    .ourClientsTitle {
+      h2 {
+        font: $fontTitleH2Mobile;
+      }
+    }
+
+    .ourClientsWrapper {
+
+      .clientWrapper {
+        width: 40%;
+        height: 100px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import "variables";
+
+#whyWeSection {
+  height: fit-content;
+  box-shadow: inset 0 0 0 9999px #131d2959;
+
+  .content {
+
+    .whyWeTitle {
+      padding-top: $titleSecondaryPadding;
+      text-align: center;
+      text-transform: uppercase;
+
+      h2 {
+        font: $fontTitleH2;
+        color: white;
+        //color: #444444;
+      }
+    }
+
+    .whyWeBlocksWrapper {
+      display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox; /* TWEENER - IE 10 */
+      display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      color: black;
+
+      .whyBlock {
+        position: relative;
+        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox; /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+        align-items: center;
+        box-sizing: border-box;
+        width: 30%;
+        min-width: 260px;
+        height: 90px;
+        margin: 0 0 20px;
+        padding: 15px;
+        transition: 1s;
+        vertical-align: middle;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 0 15px #232f3ea3;
+
+        .whyWeBlockLabel {
+          width: fit-content;
+          height: fit-content;
+          padding-left: 15px;
+        }
+
+        .whyWeBlockIcon {
+          width: 66px;
+          height: 54px;
+          text-align: center;
+          background: url("../img/why-sprite.png") no-repeat;
+
+          &.icon1 {
+            background-position: -678px -8px;
+          }
+
+          &.icon2 {
+            background-position: -678px -8px;
+          }
+
+          &.icon3 {
+            background-position: -681px -248px;
+          }
+
+          &.icon4 {
+            background-position: -673px -367px;
+          }
+
+          &.icon5 {
+            background-position: -678px -500px;
+          }
+
+          &.icon6 {
+            background-position: -677px -1359px;
+          }
+
+          &.icon7 {
+            background-position: -685px -772px;
+          }
+
+          &.icon8 {
+            background-position: -673px -1506px;
+          }
+
+          &.icon9 {
+            background-position: -675px -1057px;
+          }
+
+          &.icon10 {
+            background-position: -676px -628px;
+          }
+
+          &.icon11 {
+            background-position: -677px -8px;
+          }
+
+          &.icon12 {
+            background-position: -678px -628px;
+          }
+        }
+
+        .whyWeBlockLabel {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #whyWeSection {
+    .content {
+      background-color: $firstSectionBackgroundColor;
+
+      .whyWeTitle {
+        h2 {
+          font: $fontTitleH2Mobile;
+          color: white;
+        }
+      }
+    }
+  }
+}
+

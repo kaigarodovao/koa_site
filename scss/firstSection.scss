@@ -1,0 +1,32 @@
+@import "variables";
+
+#firstSection {
+  height: 100vh;
+  min-height: fit-content;
+  padding-top: 30vh;
+  color: white;
+  background-color: $firstSectionBackgroundColor;
+
+  .preH1Caption {
+    span {
+      font-size: 28px;
+    }
+  }
+
+  h1 {
+    font-size: 70px;
+
+    #autoTyped {
+      color: $h1AutoTypeColor;
+    }
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+  #firstSection {
+    h1 {
+      font-size: 33px;
+    }
+  }
+}
