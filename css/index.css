@@ -76,6 +76,18 @@
 #howDoWeAdaptSection .howDoWeAdaptWrapper .howDoWeAdaptBlock {
     width: 100%;
 }
+#howDoWeAdaptSection .howDoWeAdaptWrapper  .photos {
+     width: 100%;
+     display: flex;
+     min-height: 100px;
+     justify-content: space-around;
+ }
+#howDoWeAdaptSection .howDoWeAdaptWrapper .howDoWeAdaptBlock .photo {
+    height: 250px;
+    background-size: cover;
+    width: 320px;
+    border-radius: 10px;
+ }
 
 #howDoWeAdaptSection .howDoWeAdaptWrapper .howDoWeAdaptBlock.arrow {
     height: 125px;
