@@ -74,19 +74,32 @@
 }
 
 #howDoWeAdaptSection .howDoWeAdaptWrapper .howDoWeAdaptBlock {
+    margin-top: 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
-#howDoWeAdaptSection .howDoWeAdaptWrapper  .photos {
-     width: 100%;
-     display: flex;
-     min-height: 100px;
-     justify-content: space-around;
- }
+
+#howDoWeAdaptSection .howDoWeAdaptWrapper .photos {
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    justify-content: space-around;
+}
+
 #howDoWeAdaptSection .howDoWeAdaptWrapper .howDoWeAdaptBlock .photo {
     height: 250px;
     background-size: cover;
     width: 320px;
     border-radius: 10px;
+}
+
+#howDoWeAdaptSection .howDoWeAdaptWrapper .video {
+    margin-top: 20px;
+}
+#howDoWeAdaptSection .howDoWeAdaptWrapper .video iframe {
+     /*border:20px solid red; !*your border-color*!*/
+     border-radius: 10px !important;
  }
 
 #howDoWeAdaptSection .howDoWeAdaptWrapper .howDoWeAdaptBlock.arrow {
